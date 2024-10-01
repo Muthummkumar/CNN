@@ -73,7 +73,8 @@ void CNN(int channels,
                             //input[(c * NH * NW) + (i * NW) + j] 
                             //here NH is input_height(with padding )
                             //NW is input_width(with padding )+
-                            //
+                            //(channels * height * width ) + ( row * stride + kernel_row) * width + (column * stride + kernel_column )
+
                             int input_index = (c * padded_input_height * padded_input_width) + 
                                               (h * stride + kh) * padded_input_width + 
                                               (w * stride + kw);
